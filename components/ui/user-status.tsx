@@ -1,5 +1,6 @@
 "use client";
 import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
+import { Button } from "./button";
 
 export function UserStatus() {
   return (
@@ -9,7 +10,7 @@ export function UserStatus() {
       </SignedIn>
       <SignedOut>
         <SignInButton mode="modal">
-          <button className="px-3 py-1 rounded bg-blue-500 text-white hover:bg-blue-600">Sign In</button>
+          <Button variant="outline">Sign In</Button>
         </SignInButton>
       </SignedOut>
     </div>

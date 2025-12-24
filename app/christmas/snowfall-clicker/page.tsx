@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Snowflake } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface Snow {
   id: number;
@@ -109,12 +110,13 @@ export default function SnowfallClicker() {
         {!gameActive && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/80 dark:bg-blue-950/80 z-10">
             <div className="text-lg font-semibold text-pink-600 mb-2">Game Over!<br/>You missed 100 snowflakes.</div>
-            <button
+            <Button
               onClick={restart}
-              className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 mt-2"
+              variant="outline"
+              className="mt-2"
             >
               Play Again
-            </button>
+            </Button>
           </div>
         )}
       </div>
